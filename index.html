@@ -1,0 +1,1788 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Halmelan Vuohitila — Loppi, Häme</title>
+<meta name="description" content="Suomen toiseksi suurin vuohitila Lopella, Hämeessä. Luomuvuohenmaitoa, vuohenlihaa ja luomuviljaa suoraan tilalta. Jonna ja Eero Ukkola.">
+<meta name="robots" content="noindex">
+
+<!-- Fonts: ALL-SERIF editorial system — Crimson Pro (display) + Lora (body) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+<style>
+/* ============================================================
+   HALMELAN VUOHITILA — EDITORIAL-MAGAZINE DIRECTION (7TH USE)
+   Crimson Pro (display/headings) + Lora (body) — ALL-SERIF, no sans
+   Palette: sienna-paper magazine — aged paper, warm ink, terracotta
+   Signature: Vuohen Vuosi 12-month editorial centerfold calendar
+   ============================================================ */
+
+:root {
+  --paper:       #F0EAD8; /* aged magazine paper */
+  --paper-dk:    #E4D6BE; /* darker paper */
+  --paper-mid:   #EAE0CC; /* mid paper */
+  --paper-lt:    #F8F4EC; /* lightest paper/white sections */
+  --ink:         #1C1208; /* deep warm brown-black */
+  --ink-mid:     #3C2810; /* body text */
+  --ink-lt:      #6A5038; /* muted/secondary text */
+  --sienna:      #8B4A20; /* terracotta-sienna from goat coat, PRIMARY ACCENT */
+  --sienna-lt:   #B87040; /* lighter sienna, hover states */
+  --sienna-dk:   #612E10; /* dark sienna */
+  --rule:        #C4AA82; /* warm tan hairline rules */
+  --rule-lt:     #DCCFAD; /* lighter rule */
+  --dark:        #2C1C0A; /* dark bark — signature section bg */
+  --dark-mid:    #3E2A12; /* medium dark bark */
+
+  --ff-display: 'Crimson Pro', Georgia, serif;
+  --ff-body:    'Lora', Georgia, serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--ff-body);
+  font-size: 1rem;
+  line-height: 1.78;
+  color: var(--ink-mid);
+  background: var(--paper-lt);
+}
+
+/* ============================================================
+   TYPOGRAPHY — magazine editorial scale
+   ============================================================ */
+h1, h2, h3, h4, h5 {
+  font-family: var(--ff-display);
+  font-weight: 700;
+  color: var(--ink);
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+}
+.display-xl {
+  font-family: var(--ff-display);
+  font-weight: 900;
+  font-size: clamp(3.2rem, 8vw, 7.5rem);
+  line-height: 0.93;
+  letter-spacing: -0.03em;
+  color: var(--ink);
+}
+.display-lg {
+  font-family: var(--ff-display);
+  font-weight: 800;
+  font-size: clamp(2rem, 5vw, 4.5rem);
+  line-height: 1.0;
+  letter-spacing: -0.02em;
+}
+.kicker {
+  font-family: var(--ff-display);
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  color: var(--sienna);
+}
+.label-sc {
+  font-family: var(--ff-display);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--ink-lt);
+}
+
+/* ============================================================
+   HAIRLINE RULES — magazine print grammar
+   ============================================================ */
+.rule-h { width: 100%; height: 1px; background: var(--rule); display: block; }
+.rule-h-thick { width: 100%; height: 3px; background: var(--ink); display: block; }
+.rule-pair {
+  display: grid;
+  grid-template-rows: 3px 6px 1px;
+}
+.rule-pair::before { content: ''; background: var(--ink); }
+.rule-pair::after  { content: ''; background: var(--rule); margin-top: 6px; }
+
+/* ============================================================
+   NAVIGATION — magazine masthead style
+   ============================================================ */
+.site-nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  background: rgba(240, 234, 216, 0.97);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid var(--rule);
+  transition: background 0.3s;
+}
+.nav-inner {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 clamp(1.5rem, 4vw, 3.5rem);
+  height: 58px;
+}
+.nav-brand {
+  font-family: var(--ff-display);
+  font-size: clamp(0.9rem, 2vw, 1.05rem);
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ink);
+  text-decoration: none;
+}
+.nav-brand em {
+  font-style: italic;
+  font-weight: 300;
+  color: var(--sienna);
+  text-transform: none;
+  letter-spacing: 0;
+}
+.nav-right { display: flex; align-items: center; gap: 2rem; }
+.nav-links { display: flex; gap: 1.8rem; list-style: none; }
+.nav-links a {
+  font-family: var(--ff-display);
+  font-size: 0.82rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--ink-mid);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.nav-links a:hover { color: var(--sienna); }
+.lang-bar { display: flex; gap: 0.4rem; }
+.lang-btn {
+  font-family: var(--ff-display);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  color: var(--ink-lt);
+  background: none;
+  border: 1px solid var(--rule);
+  padding: 3px 7px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.lang-btn.active, .lang-btn:hover {
+  background: var(--sienna);
+  border-color: var(--sienna);
+  color: var(--paper);
+}
+.hamburger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 4px; }
+.hamburger span { display: block; width: 22px; height: 1.5px; background: var(--ink); transition: all 0.3s; }
+.mobile-menu {
+  display: none; position: fixed; top: 58px; left: 0; right: 0; bottom: 0;
+  background: rgba(28, 18, 8, 0.97); z-index: 99;
+  flex-direction: column; align-items: center; justify-content: center; gap: 2.5rem;
+}
+.mobile-menu.open { display: flex; }
+.mobile-menu a {
+  font-family: var(--ff-display);
+  font-size: 1.8rem; font-weight: 700;
+  color: var(--paper); text-decoration: none;
+  letter-spacing: 0.04em;
+}
+.mobile-menu a:hover { color: var(--sienna-lt); }
+.mobile-lang { display: flex; gap: 0.6rem; }
+.mobile-lang .lang-btn { color: var(--paper-dk); border-color: var(--ink-mid); }
+.mobile-lang .lang-btn.active, .mobile-lang .lang-btn:hover {
+  background: var(--sienna); border-color: var(--sienna); color: var(--paper);
+}
+
+/* ============================================================
+   MASTHEAD HERO — magazine cover spread
+   ============================================================ */
+.masthead-hero {
+  padding-top: 58px;
+  background: var(--paper);
+}
+.masthead-bar {
+  border-bottom: 1px solid var(--rule);
+  padding: 0.65rem clamp(1.5rem, 4vw, 3.5rem);
+  display: flex; align-items: center; justify-content: space-between;
+}
+.masthead-bar .pub-info {
+  font-family: var(--ff-display);
+  font-size: 0.65rem;
+  font-weight: 400;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--ink-lt);
+}
+.masthead-title-line {
+  border-bottom: 3px solid var(--ink);
+  padding: 0.9rem clamp(1.5rem, 4vw, 3.5rem) 0;
+  text-align: center;
+}
+.masthead-wordmark {
+  font-family: var(--ff-display);
+  font-size: clamp(1.4rem, 4vw, 3.2rem);
+  font-weight: 900;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ink);
+}
+.masthead-wordmark em {
+  font-style: italic;
+  font-weight: 300;
+  color: var(--sienna);
+  letter-spacing: 0.04em;
+}
+.masthead-sub {
+  font-family: var(--ff-display);
+  font-size: 0.7rem;
+  font-weight: 400;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--ink-lt);
+  margin-top: 0.3rem;
+  padding-bottom: 0.9rem;
+}
+
+/* --- Feature spread below masthead --- */
+.hero-spread {
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: 0;
+  border-bottom: 1px solid var(--rule);
+}
+@media (max-width: 860px) {
+  .hero-spread { grid-template-columns: 1fr; }
+  .hero-photo-panel { display: none; }
+}
+.hero-text-panel {
+  padding: clamp(2rem, 5vw, 4rem) clamp(1.5rem, 4vw, 3.5rem);
+  border-right: 1px solid var(--rule);
+}
+.hero-issue-line {
+  display: flex; align-items: center; gap: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+.issue-tag {
+  font-family: var(--ff-display);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--paper);
+  background: var(--sienna);
+  padding: 4px 10px;
+}
+.hero-headline {
+  font-family: var(--ff-display);
+  font-weight: 900;
+  font-size: clamp(2.8rem, 7vw, 6.5rem);
+  line-height: 0.92;
+  letter-spacing: -0.03em;
+  color: var(--ink);
+  margin-bottom: 1.6rem;
+}
+.hero-headline em {
+  font-style: italic;
+  font-weight: 300;
+  color: var(--sienna);
+}
+.hero-deck {
+  font-family: var(--ff-body);
+  font-size: clamp(1.05rem, 2vw, 1.25rem);
+  font-style: italic;
+  line-height: 1.55;
+  color: var(--ink-mid);
+  max-width: 56ch;
+  margin-bottom: 2rem;
+  border-left: 3px solid var(--sienna);
+  padding-left: 1.2rem;
+}
+.hero-byline {
+  display: flex; align-items: center; gap: 1.2rem;
+}
+.hero-byline .rule-h { flex: 1; }
+.hero-byline-text {
+  font-family: var(--ff-display);
+  font-size: 0.72rem;
+  font-weight: 400;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-lt);
+  white-space: nowrap;
+}
+
+/* Hero photo panel — placeholder */
+.hero-photo-panel {
+  position: relative;
+  background: var(--dark-mid);
+  min-height: 480px;
+  overflow: hidden;
+}
+.hero-photo-panel .ph {
+  position: absolute; inset: 0;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  gap: 1rem;
+}
+.hero-photo-panel .ph svg { opacity: 0.25; }
+.hero-photo-panel .ph-caption {
+  position: absolute; bottom: 0; left: 0; right: 0;
+  background: rgba(28, 18, 8, 0.85);
+  padding: 0.6rem 1rem;
+  font-family: var(--ff-body);
+  font-size: 0.72rem;
+  font-style: italic;
+  color: var(--paper-dk);
+  letter-spacing: 0.04em;
+}
+.hero-photo-panel img {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+}
+.hero-photo-panel img + .ph-caption { /* keep caption over real photos */
+  position: absolute; bottom: 0; left: 0; right: 0;
+}
+
+/* ============================================================
+   TEASERS BAR — magazine contents strip
+   ============================================================ */
+.teasers-bar {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-bottom: 1px solid var(--rule);
+}
+.teaser-item {
+  padding: 1.2rem clamp(1rem, 2.5vw, 1.8rem);
+  border-right: 1px solid var(--rule);
+  opacity: 0; transform: translateY(12px); transition: all 0.5s ease;
+}
+.teaser-item:last-child { border-right: none; }
+.teaser-item.visible { opacity: 1; transform: none; }
+.teaser-num {
+  font-family: var(--ff-display);
+  font-size: 2.4rem;
+  font-weight: 900;
+  color: rgba(28, 18, 8, 0.07);
+  line-height: 1;
+  margin-bottom: 0.4rem;
+}
+.teaser-title {
+  font-family: var(--ff-display);
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--ink);
+  line-height: 1.3;
+}
+.teaser-desc {
+  font-family: var(--ff-body);
+  font-size: 0.78rem;
+  font-style: italic;
+  color: var(--ink-lt);
+  margin-top: 0.25rem;
+}
+@media (max-width: 600px) {
+  .teasers-bar { grid-template-columns: 1fr; }
+  .teaser-item { border-right: none; border-bottom: 1px solid var(--rule); }
+}
+
+/* ============================================================
+   SECTION: ARTICLE — multi-column running text with drop cap
+   ============================================================ */
+.section-article {
+  background: var(--paper-lt);
+  padding: clamp(3rem, 6vw, 5.5rem) 0;
+}
+.section-head {
+  padding: 0 clamp(1.5rem, 4vw, 3.5rem);
+  margin-bottom: 2.5rem;
+}
+.section-head .kicker { margin-bottom: 0.8rem; display: block; }
+.section-head .rule-h-thick { margin-top: 0.6rem; }
+.section-head .section-number {
+  font-family: var(--ff-display);
+  font-size: clamp(5rem, 15vw, 12rem);
+  font-weight: 900;
+  line-height: 1;
+  color: rgba(28, 18, 8, 0.05);
+  position: absolute;
+  right: clamp(1.5rem, 4vw, 3.5rem);
+  top: 0;
+  pointer-events: none;
+}
+.article-body {
+  padding: 0 clamp(1.5rem, 4vw, 3.5rem);
+  position: relative;
+}
+/* Two-column running text */
+.two-col-text {
+  column-count: 2;
+  column-gap: clamp(2rem, 5vw, 4rem);
+  column-rule: 1px solid var(--rule-lt);
+  font-family: var(--ff-body);
+  font-size: clamp(0.95rem, 1.5vw, 1.08rem);
+  line-height: 1.82;
+  color: var(--ink-mid);
+  max-width: 1200px;
+}
+@media (max-width: 700px) { .two-col-text { column-count: 1; } }
+/* Real CSS drop cap */
+.two-col-text > p:first-of-type::first-letter {
+  font-family: var(--ff-display);
+  font-weight: 900;
+  font-size: 5.2em;
+  float: left;
+  line-height: 0.78;
+  margin-right: 0.08em;
+  margin-top: 0.05em;
+  color: var(--sienna);
+}
+.two-col-text p { margin-bottom: 1.1em; }
+.two-col-text p:last-child { margin-bottom: 0; }
+
+/* Pull quote — column-spanning */
+.pull-quote {
+  column-span: all;
+  margin: 2.2rem 0;
+  border-top: 3px solid var(--ink);
+  border-bottom: 1px solid var(--rule);
+  padding: 1.8rem 0 1.6rem;
+  text-align: center;
+  break-before: avoid;
+  break-after: avoid;
+}
+.pull-quote blockquote {
+  font-family: var(--ff-display);
+  font-size: clamp(1.4rem, 3vw, 2.2rem);
+  font-weight: 300;
+  font-style: italic;
+  color: var(--ink);
+  line-height: 1.35;
+  max-width: 72ch;
+  margin: 0 auto;
+}
+.pull-quote blockquote::before {
+  content: '\201C';
+  font-size: 4em;
+  line-height: 0.6;
+  color: var(--sienna);
+  display: block;
+  margin-bottom: 0.4rem;
+  font-style: normal;
+  font-weight: 900;
+}
+.pull-quote cite {
+  display: block;
+  margin-top: 1rem;
+  font-family: var(--ff-display);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--sienna);
+  font-style: normal;
+}
+
+/* Inline figure within column flow */
+.inline-figure {
+  break-inside: avoid;
+  page-break-inside: avoid;
+  margin: 1.4rem 0 1.6rem;
+  border: 1px solid var(--rule);
+}
+.inline-figure .ph {
+  background: var(--paper-dk);
+  aspect-ratio: 4/3;
+  display: flex; align-items: center; justify-content: center;
+  flex-direction: column; gap: 0.6rem;
+}
+.inline-figure img { width: 100%; display: block; }
+.inline-figure figcaption {
+  font-family: var(--ff-body);
+  font-size: 0.72rem;
+  font-style: italic;
+  color: var(--ink-lt);
+  padding: 0.5rem 0.7rem;
+  background: var(--paper);
+  border-top: 1px solid var(--rule-lt);
+  line-height: 1.5;
+}
+
+/* Footnote-style small print */
+.footnotes {
+  column-span: all;
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--rule-lt);
+}
+.footnote {
+  font-family: var(--ff-body);
+  font-size: 0.72rem;
+  color: var(--ink-lt);
+  line-height: 1.5;
+  margin-bottom: 0.4rem;
+}
+.footnote sup {
+  font-family: var(--ff-display);
+  font-weight: 700;
+  color: var(--sienna);
+  font-size: 0.65em;
+  margin-right: 0.2em;
+}
+
+/* ============================================================
+   SECTION: PRODUCTS — editorial magazine sub-articles
+   ============================================================ */
+.section-products {
+  background: var(--paper-dk);
+  padding: clamp(3rem, 6vw, 5.5rem) 0;
+  border-top: 3px solid var(--ink);
+}
+.products-header {
+  padding: 0 clamp(1.5rem, 4vw, 3.5rem);
+  margin-bottom: 3rem;
+}
+.products-header h2 {
+  font-family: var(--ff-display);
+  font-size: clamp(2rem, 5vw, 4rem);
+  font-weight: 900;
+}
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-top: 1px solid var(--rule);
+}
+@media (max-width: 720px) { .products-grid { grid-template-columns: 1fr; } }
+.product-article {
+  padding: 2.2rem clamp(1.2rem, 2.5vw, 2rem);
+  border-right: 1px solid var(--rule);
+  opacity: 0; transform: translateY(18px); transition: all 0.6s ease;
+}
+.product-article:last-child { border-right: none; }
+.product-article.visible { opacity: 1; transform: none; }
+.product-article .product-num {
+  font-family: var(--ff-display);
+  font-size: 3.5rem;
+  font-weight: 900;
+  color: rgba(28, 18, 8, 0.06);
+  line-height: 1;
+  display: block;
+  margin-bottom: 0.8rem;
+}
+.product-article h3 {
+  font-family: var(--ff-display);
+  font-size: clamp(1.3rem, 2.5vw, 1.7rem);
+  font-weight: 800;
+  color: var(--ink);
+  margin-bottom: 0.4rem;
+}
+.product-article .product-subtitle {
+  font-family: var(--ff-display);
+  font-size: 0.78rem;
+  font-weight: 400;
+  font-style: italic;
+  color: var(--sienna);
+  letter-spacing: 0.06em;
+  margin-bottom: 1rem;
+  display: block;
+}
+.product-article .rule-h { margin-bottom: 1.2rem; }
+.product-ph {
+  aspect-ratio: 3/2;
+  background: var(--paper-mid);
+  border: 1px solid var(--rule-lt);
+  margin-bottom: 1.2rem;
+  display: flex; align-items: center; justify-content: center;
+  flex-direction: column; gap: 0.5rem;
+}
+.product-ph img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.product-article p {
+  font-family: var(--ff-body);
+  font-size: 0.9rem;
+  line-height: 1.75;
+  color: var(--ink-mid);
+}
+.ph-icon {
+  color: var(--rule);
+  opacity: 0.6;
+}
+
+/* ============================================================
+   SECTION: VUOHEN VUOSI — signature 12-month editorial calendar
+   ============================================================ */
+.section-calendar {
+  background: var(--dark);
+  padding: clamp(3rem, 6vw, 5.5rem) 0;
+  border-top: 3px solid var(--sienna);
+}
+.calendar-header {
+  padding: 0 clamp(1.5rem, 4vw, 3.5rem);
+  margin-bottom: 3rem;
+}
+.calendar-header .kicker { color: var(--sienna-lt); margin-bottom: 0.8rem; display: block; }
+.calendar-header h2 {
+  font-family: var(--ff-display);
+  font-size: clamp(1.8rem, 4.5vw, 3.5rem);
+  font-weight: 900;
+  color: var(--paper);
+  line-height: 1.05;
+}
+.calendar-header p {
+  font-family: var(--ff-body);
+  font-size: 1rem;
+  font-style: italic;
+  color: rgba(240, 234, 216, 0.6);
+  margin-top: 0.8rem;
+  max-width: 60ch;
+}
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-top: 1px solid rgba(196, 170, 130, 0.25);
+  border-left: 1px solid rgba(196, 170, 130, 0.25);
+}
+@media (max-width: 860px) { .calendar-grid { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 540px) { .calendar-grid { grid-template-columns: repeat(2, 1fr); } }
+.cal-month {
+  border-right: 1px solid rgba(196, 170, 130, 0.25);
+  border-bottom: 1px solid rgba(196, 170, 130, 0.25);
+  padding: 1.4rem 1.2rem;
+  opacity: 0; transition: opacity 0.5s ease;
+}
+.cal-month.visible { opacity: 1; }
+.cal-month.peak { background: rgba(139, 74, 32, 0.18); }
+.cal-month-name {
+  font-family: var(--ff-display);
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--sienna-lt);
+  margin-bottom: 0.5rem;
+}
+.cal-month-event {
+  font-family: var(--ff-display);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--paper);
+  line-height: 1.25;
+  margin-bottom: 0.5rem;
+}
+.cal-month-text {
+  font-family: var(--ff-body);
+  font-size: 0.72rem;
+  line-height: 1.6;
+  color: rgba(240, 234, 216, 0.55);
+  font-style: italic;
+}
+.cal-month-icon {
+  font-size: 1.4rem;
+  margin-bottom: 0.4rem;
+  display: block;
+}
+
+/* ============================================================
+   SECTION: TARINA — editorial feature spread
+   ============================================================ */
+.section-tarina {
+  background: var(--paper);
+  padding: clamp(3rem, 6vw, 5rem) 0;
+  border-top: 3px solid var(--ink);
+}
+.tarina-inner {
+  display: grid;
+  grid-template-columns: 1fr 1px 1fr;
+  gap: 0;
+}
+@media (max-width: 760px) {
+  .tarina-inner { grid-template-columns: 1fr; }
+  .tarina-divider { display: none; }
+}
+.tarina-divider { background: var(--rule); }
+.tarina-col { padding: 2rem clamp(1.5rem, 4vw, 3.5rem); }
+.tarina-col h2 {
+  font-family: var(--ff-display);
+  font-size: clamp(1.6rem, 3.5vw, 2.8rem);
+  font-weight: 900;
+  margin-bottom: 1.2rem;
+}
+.tarina-col .tarina-photo {
+  aspect-ratio: 4/3;
+  background: var(--paper-dk);
+  border: 1px solid var(--rule);
+  margin-bottom: 1.5rem;
+  display: flex; align-items: center; justify-content: center;
+  flex-direction: column; gap: 0.5rem;
+  overflow: hidden;
+}
+.tarina-col .tarina-photo img { width: 100%; height: 100%; object-fit: cover; }
+.tarina-col p {
+  font-family: var(--ff-body);
+  font-size: clamp(0.9rem, 1.5vw, 1rem);
+  line-height: 1.82;
+  color: var(--ink-mid);
+  margin-bottom: 1em;
+}
+.tarina-col p:last-child { margin-bottom: 0; }
+.tarina-fact-row {
+  display: flex; align-items: flex-start; gap: 0.8rem;
+  border-top: 1px solid var(--rule-lt);
+  padding: 0.8rem 0;
+}
+.tarina-fact-num {
+  font-family: var(--ff-display);
+  font-size: 1.8rem;
+  font-weight: 900;
+  color: var(--sienna);
+  line-height: 1;
+  min-width: 3rem;
+}
+.tarina-fact-label {
+  font-family: var(--ff-body);
+  font-size: 0.82rem;
+  line-height: 1.45;
+  color: var(--ink-mid);
+}
+.tarina-fact-label strong {
+  display: block;
+  font-family: var(--ff-display);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-lt);
+  margin-bottom: 0.1rem;
+}
+
+/* ============================================================
+   SECTION: CONTACT — magazine colophon
+   ============================================================ */
+.section-contact {
+  background: var(--paper-dk);
+  padding: clamp(3rem, 6vw, 5rem) 0;
+  border-top: 3px solid var(--ink);
+  border-bottom: 3px solid var(--ink);
+}
+.colophon-header {
+  padding: 0 clamp(1.5rem, 4vw, 3.5rem);
+  margin-bottom: 2.5rem;
+}
+.colophon-header h2 {
+  font-family: var(--ff-display);
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  font-weight: 900;
+}
+.colophon-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 0 clamp(1.5rem, 4vw, 3.5rem);
+  gap: 0;
+  border-top: 1px solid var(--rule);
+}
+@media (max-width: 640px) { .colophon-grid { grid-template-columns: 1fr; } }
+.colophon-col {
+  padding: 2rem 1.5rem 2rem 0;
+  border-right: 1px solid var(--rule-lt);
+  padding-right: 2rem;
+}
+.colophon-col:first-child { padding-left: 0; }
+.colophon-col:last-child { border-right: none; padding-left: 2rem; padding-right: 0; }
+.colophon-col:nth-child(2) { padding-left: 2rem; }
+.colophon-col-label {
+  font-family: var(--ff-display);
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--sienna);
+  border-bottom: 1px solid var(--rule-lt);
+  padding-bottom: 0.6rem;
+  margin-bottom: 1rem;
+  display: block;
+}
+.colophon-row {
+  display: flex; gap: 0.8rem;
+  margin-bottom: 0.65rem;
+  align-items: flex-start;
+}
+.colophon-row-label {
+  font-family: var(--ff-display);
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-lt);
+  min-width: 4.5rem;
+  padding-top: 0.15rem;
+}
+.colophon-row-val {
+  font-family: var(--ff-body);
+  font-size: 0.88rem;
+  color: var(--ink-mid);
+  line-height: 1.4;
+}
+.colophon-row-val a {
+  color: var(--sienna);
+  text-decoration: none;
+}
+.colophon-row-val a:hover { text-decoration: underline; }
+
+/* ============================================================
+   FOOTER — publication colophon
+   ============================================================ */
+.site-footer {
+  background: var(--ink);
+  color: var(--paper-dk);
+  padding: 2rem clamp(1.5rem, 4vw, 3.5rem);
+  display: flex; align-items: center; justify-content: space-between;
+  flex-wrap: wrap; gap: 1rem;
+}
+.footer-wordmark {
+  font-family: var(--ff-display);
+  font-size: 0.88rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--paper);
+}
+.footer-wordmark em {
+  font-style: italic; font-weight: 300; color: var(--sienna-lt); text-transform: none; letter-spacing: 0;
+}
+.footer-credit {
+  font-family: var(--ff-body);
+  font-size: 0.7rem;
+  font-style: italic;
+  color: rgba(240, 234, 216, 0.4);
+}
+.footer-credit a { color: rgba(240, 234, 216, 0.6); text-decoration: none; }
+.footer-credit a:hover { color: var(--sienna-lt); }
+
+/* ============================================================
+   UTILITIES
+   ============================================================ */
+.container { max-width: 1240px; margin: 0 auto; }
+.reveal { opacity: 0; transform: translateY(20px); transition: all 0.6s ease; }
+.reveal.visible { opacity: 1; transform: none; }
+
+/* ============================================================
+   I18N — language toggle
+   ============================================================ */
+[data-lang] { display: none; }
+body.lang-fi .lang-fi { display: block; }
+body.lang-fi span.lang-fi { display: inline; }
+body.lang-sv .lang-sv { display: block; }
+body.lang-sv span.lang-sv { display: inline; }
+body.lang-en .lang-en { display: block; }
+body.lang-en span.lang-en { display: inline; }
+/* special inline cases */
+.i18n-inline .lang-fi,
+.i18n-inline .lang-sv,
+.i18n-inline .lang-en { display: none; }
+body.lang-fi .i18n-inline .lang-fi { display: inline; }
+body.lang-sv .i18n-inline .lang-sv { display: inline; }
+body.lang-en .i18n-inline .lang-en { display: inline; }
+
+/* ============================================================
+   RESPONSIVE — mobile polish
+   ============================================================ */
+@media (max-width: 860px) {
+  .nav-links { display: none; }
+  .hamburger { display: flex; }
+  .hero-text-panel { border-right: none; }
+  .colophon-grid { gap: 1.5rem; }
+  .colophon-col { padding-left: 0 !important; padding-right: 0 !important; border-right: none; border-bottom: 1px solid var(--rule-lt); }
+  .colophon-col:last-child { border-bottom: none; }
+}
+</style>
+</head>
+<body class="lang-fi">
+
+<!-- ============================================================
+     NAVIGATION
+     ============================================================ -->
+<nav class="site-nav" id="site-nav">
+  <div class="nav-inner">
+    <a href="#" class="nav-brand">
+      Halmelan <em>Vuohitila</em>
+    </a>
+    <div class="nav-right">
+      <ul class="nav-links">
+        <li><a href="#article" class="i18n-inline">
+          <span class="lang-fi">Tila</span>
+          <span class="lang-sv">Gård</span>
+          <span class="lang-en">Farm</span>
+        </a></li>
+        <li><a href="#products" class="i18n-inline">
+          <span class="lang-fi">Tuotteet</span>
+          <span class="lang-sv">Produkter</span>
+          <span class="lang-en">Products</span>
+        </a></li>
+        <li><a href="#calendar" class="i18n-inline">
+          <span class="lang-fi">Vuosi</span>
+          <span class="lang-sv">År</span>
+          <span class="lang-en">Year</span>
+        </a></li>
+        <li><a href="#contact" class="i18n-inline">
+          <span class="lang-fi">Yhteystiedot</span>
+          <span class="lang-sv">Kontakt</span>
+          <span class="lang-en">Contact</span>
+        </a></li>
+      </ul>
+      <div class="lang-bar">
+        <button class="lang-btn active" onclick="setLang('fi')">FI</button>
+        <button class="lang-btn" onclick="setLang('sv')">SV</button>
+        <button class="lang-btn" onclick="setLang('en')">EN</button>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+  <!-- Mobile menu -->
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="#article" onclick="closeMobile()" class="i18n-inline">
+      <span class="lang-fi">Tila</span><span class="lang-sv">Gård</span><span class="lang-en">Farm</span>
+    </a>
+    <a href="#products" onclick="closeMobile()" class="i18n-inline">
+      <span class="lang-fi">Tuotteet</span><span class="lang-sv">Produkter</span><span class="lang-en">Products</span>
+    </a>
+    <a href="#calendar" onclick="closeMobile()" class="i18n-inline">
+      <span class="lang-fi">Vuosi</span><span class="lang-sv">År</span><span class="lang-en">Year</span>
+    </a>
+    <a href="#contact" onclick="closeMobile()" class="i18n-inline">
+      <span class="lang-fi">Yhteystiedot</span><span class="lang-sv">Kontakt</span><span class="lang-en">Contact</span>
+    </a>
+    <div class="mobile-lang lang-bar">
+      <button class="lang-btn active" onclick="setLang('fi');closeMobile()">FI</button>
+      <button class="lang-btn" onclick="setLang('sv');closeMobile()">SV</button>
+      <button class="lang-btn" onclick="setLang('en');closeMobile()">EN</button>
+    </div>
+  </div>
+</nav>
+
+<!-- ============================================================
+     MASTHEAD HERO
+     ============================================================ -->
+<header class="masthead-hero">
+
+  <!-- Magazine dateline bar -->
+  <div class="masthead-bar">
+    <span class="pub-info">Loppi &bull; Häme &bull; Suomi</span>
+    <span class="pub-info i18n-inline">
+      <span class="lang-fi">Luomuvuohitila &bull; Est. 2019</span>
+      <span class="lang-sv">Ekologisk getgård &bull; Est. 2019</span>
+      <span class="lang-en">Organic Goat Farm &bull; Est. 2019</span>
+    </span>
+    <span class="pub-info">Halmelantie 77 &bull; 12700 Loppi</span>
+  </div>
+
+  <!-- Magazine masthead title -->
+  <div class="masthead-title-line">
+    <div class="masthead-wordmark">
+      Halmelan <em>Vuohitila</em>
+    </div>
+    <div class="masthead-sub">
+      <span class="i18n-inline">
+        <span class="lang-fi">Luomuvuohenmaito &bull; Vuohenliha &bull; Luomuvilja</span>
+        <span class="lang-sv">Ekologisk getmjolk &bull; Getkott &bull; Ekologiskt spannmal</span>
+        <span class="lang-en">Organic Goat Milk &bull; Goat Meat &bull; Organic Grain</span>
+      </span>
+    </div>
+  </div>
+
+  <!-- Feature spread -->
+  <div class="hero-spread">
+    <div class="hero-text-panel">
+      <div class="hero-issue-line">
+        <span class="issue-tag i18n-inline">
+          <span class="lang-fi">Peittelemätön tarina</span>
+          <span class="lang-sv">Den sanna historien</span>
+          <span class="lang-en">The real story</span>
+        </span>
+        <span class="rule-h" style="flex:1; height:1px; background:var(--rule);"></span>
+      </div>
+
+      <!-- Main feature headline -->
+      <h1 class="hero-headline i18n-inline">
+        <span class="lang-fi">Kuusisataa
+          <em>vuohta</em>
+          Lopen laitumilla</span>
+        <span class="lang-sv">Sexhundra
+          <em>getter</em>
+          pa Loppi betesmark</span>
+        <span class="lang-en">Six hundred
+          <em>goats</em>
+          on the fields of Loppi</span>
+      </h1>
+
+      <p class="hero-deck i18n-inline">
+        <span class="lang-fi">Kun Jonna ja Eero Ukkola aloittivat kolmellatoista vuohella vuonna 2019, heillä ei ollut aavistustakaan, mihin se johtaisi. Tänaan Halmelan Vuohitila on Suomen toiseksi suurin vuohitila.</span>
+        <span class="lang-sv">Nar Jonna och Eero Ukkola borjade med tretton getter ar 2019, anade de inte vart det skulle leda. Idag ar Halmelans getgard Finlands nast storsta.</span>
+        <span class="lang-en">When Jonna and Eero Ukkola started with thirteen goats in 2019, they had no idea where it would lead. Today, Halmelan Vuohitila is Finland's second-largest goat farm.</span>
+      </p>
+
+      <div class="hero-byline">
+        <div class="rule-h"></div>
+        <span class="hero-byline-text">Loppi, Kanta-Häme</span>
+        <div class="rule-h"></div>
+      </div>
+    </div>
+
+    <!-- Hero photo (placeholder — needs real FB cover photo) -->
+    <div class="hero-photo-panel">
+      <div class="ph">
+        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" color="var(--paper-dk)">
+          <rect x="3" y="3" width="18" height="18" rx="0"/>
+          <circle cx="8.5" cy="8.5" r="1.5"/>
+          <polyline points="21 15 16 10 5 21"/>
+        </svg>
+      </div>
+      <p class="ph-caption i18n-inline">
+        <span class="lang-fi">Halmelan Vuohitilan kutut laitumella, Loppi, Kanta-Häme.</span>
+        <span class="lang-sv">Halmelan getter pa bete, Loppi, Kanta-Tavastland.</span>
+        <span class="lang-en">Halmelan Vuohitila goats on pasture, Loppi, Kanta-Hame.</span>
+      </p>
+    </div>
+  </div>
+
+  <!-- Teasers bar -->
+  <div class="teasers-bar">
+    <div class="teaser-item">
+      <div class="teaser-num">600</div>
+      <div class="teaser-title i18n-inline">
+        <span class="lang-fi">Vuohta tilalla</span>
+        <span class="lang-sv">Getter pa garden</span>
+        <span class="lang-en">Goats on the farm</span>
+      </div>
+      <div class="teaser-desc i18n-inline">
+        <span class="lang-fi">Suomen toiseksi suurin vuohitila</span>
+        <span class="lang-sv">Finlands nast storsta getgard</span>
+        <span class="lang-en">Finland's second-largest goat farm</span>
+      </div>
+    </div>
+    <div class="teaser-item">
+      <div class="teaser-num">100%</div>
+      <div class="teaser-title i18n-inline">
+        <span class="lang-fi">Luomuviljely</span>
+        <span class="lang-sv">Ekologisk odling</span>
+        <span class="lang-en">Certified Organic</span>
+      </div>
+      <div class="teaser-desc i18n-inline">
+        <span class="lang-fi">Luomun periaatteet alusta alkaen</span>
+        <span class="lang-sv">Ekologiska principer fran starten</span>
+        <span class="lang-en">Organic principles from the start</span>
+      </div>
+    </div>
+    <div class="teaser-item">
+      <div class="teaser-num">2019</div>
+      <div class="teaser-title i18n-inline">
+        <span class="lang-fi">Toiminta alkoi</span>
+        <span class="lang-sv">Grundades</span>
+        <span class="lang-en">Founded</span>
+      </div>
+      <div class="teaser-desc i18n-inline">
+        <span class="lang-fi">13 vuohesta 600:aan viidessa vuodessa</span>
+        <span class="lang-sv">Fran 13 till 600 getter pa fem ar</span>
+        <span class="lang-en">From 13 to 600 goats in five years</span>
+      </div>
+    </div>
+  </div>
+
+</header>
+
+<!-- ============================================================
+     ARTICLE — multi-column editorial text with drop cap
+     ============================================================ -->
+<section class="section-article" id="article">
+  <div style="position:relative;">
+    <div class="section-head">
+      <span class="kicker i18n-inline">
+        <span class="lang-fi">Tilan tarina</span>
+        <span class="lang-sv">Gardenshistoria</span>
+        <span class="lang-en">The farm story</span>
+      </span>
+      <div class="rule-h-thick" style="margin-top:0.6rem;"></div>
+    </div>
+
+    <div class="article-body">
+      <!-- Multi-column running text with real drop cap -->
+      <div class="two-col-text lang-fi" data-lang>
+        <p>Kaksitoista vuotta Lopen Halmelajarven rannalla. Sita ennen oli vuosikymmenia luomuviljaa, peltoja jotka tunsivat Ukkolan suvun askeleet. Sitten tuli sukupolvenvaihdos, ja Jonna ja Eero alkoivat mietia uutta suuntaa. Lehmameijeri tuntui luontevalta&sup1;, mutta vuohenmaidon kysynta kasvoi Suomessa nopeammin kuin kukaan oli osannut odottaa. Kolmetoista vuohta saapui tilalle kevaalla 2019.</p>
+        <p>Vanhassa navetassa ei ollut lypsykaruselli&sup2;. Jonna muistaa paivan, jolloin hankittiin ensimmainen lypsykone: &ldquo;se tuntui valtavalta investoinnilta, mutta taaksepain katsottuna se oli pienin askeleista.&rdquo; Viisi vuotta myohemmin lypsykaruselliin jonottaa paivittain yli 360 kuttua, ja kokonaispaaluku on noussut kuuteensataan. Halmelan Vuohitila on kasvanut Suomen toiseksi suurimmaksi vuohitilaksi.</p>
+
+        <!-- Inline figure in column flow -->
+        <figure class="inline-figure">
+          <div class="ph">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--rule)" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="0"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+          </div>
+          <figcaption>Lypsykarusellin aamurutiini. Joka paiva yli 360 kuttua jonottaa vuorollaan.</figcaption>
+        </figure>
+
+        <p>Maito kulkee suoraan Juustoportille&sup3;, joka jalostaa siita juustoja. Tilan oma myynti keskittyy vuohenlihaan: pakaste ja tuore liha myydaan suoraan tilalta. Pellot tuottavat luomuviljaa markkinoille. Kolme tuotantosuuntaa, yksi perhe, yksi tila.</p>
+
+        <!-- Column-spanning pull quote -->
+        <div class="pull-quote">
+          <blockquote class="i18n-inline">
+            <span class="lang-fi">Aloitimme kolmellatoista vuohella. Kuusi vuotta myohemmin meilla on kuusisataa. En osaisi sanoa, missa raja tulee, mutta tiedamme, etta laatu on rajamme.</span>
+            <span class="lang-sv">Vi borjade med tretton getter. Sex ar senare har vi sexhundra. Jag kan inte saga var gransen gar, men vi vet att kvaliteten ar var gransen.</span>
+            <span class="lang-en">We started with thirteen goats. Six years later we have six hundred. I couldn't say where the limit is, but we know that quality is our limit.</span>
+          </blockquote>
+          <cite>Jonna Ukkola, Halmelan Vuohitila</cite>
+        </div>
+
+        <p>Lopen pelloilla vuohet laiduntavat kesakuukausina. Luomusertifiointi on ohjannut tilan kaikkia valintoja lahtien rehun viljelystakeita myoten. &ldquo;Luomu ei ole meille markkinointilause, se on tapa ajatella&rdquo;, Eero kertoo. Elainten hyvinvointi nakyvat arjessa: paremmin voidessaan vuohi myos tuottaa paremmin.</p>
+
+        <p>Vuohenmaidon proteiinipitoisuus on lehmainmaitoa korkeampi, ja sen rakenne tekee siita helpommin sulavaa monille ihmisille. Juustoportin jalostamat Halmelan maidosta tehdyt juustot loydetaan valtakunnallisesti kaupoista. Halmelan tila on osa suomalaista elintarvikeketjua tavalla, joka nakyy myos kuluttajan lautasella.</p>
+
+        <!-- Footnotes -->
+        <div class="footnotes">
+          <p class="footnote"><sup>1</sup> Tilan aiempi tuotantosuunta ennen sukupolvenvaihdosta oli luomuvilja, ei nautakarjatalous.</p>
+          <p class="footnote"><sup>2</sup> Lypsykaruselli: koneellinen pyoriva laite, jossa useita elaimia lypsetaan samanaikaisesti.</p>
+          <p class="footnote"><sup>3</sup> Juustoportti on suomalainen juustoyritys, joka kayttaa kotimaista maatilaitojen maitoa.</p>
+        </div>
+      </div>
+
+      <div class="two-col-text lang-sv" data-lang>
+        <p>Tolv ar vid stranden av Halmelajarvi i Loppi. Fore det: artionden av ekologiskt spannmal, aker som kande Ukkolafamiljens fotsteg. Sedan kom ett generationsskifte, och Jonna och Eero borjade fundera pa en ny riktning. Getmjolkens efterfragan vaxte i Finland snabbare an nagon hade kunnat ana. Tretton getter anlande till garden varen 2019.</p>
+        <p>Det gamla stallet hade ingen mjolkningskarusell. Jonna minns dagen de skaffade den forsta mjolkningsmaskinen. Fem ar senare koar dagligen over 360 getter upp till karusellen, och det totala antalet har stigit till sexhundra. Halmelan Vuohitila har vuxit till Finlands nast storsta getgard.</p>
+        <div class="pull-quote">
+          <blockquote class="lang-sv" data-lang>Vi borjade med tretton getter. Sex ar senare har vi sexhundra. Jag kan inte saga var gransen gar, men vi vet att kvaliteten ar var gransen.</blockquote>
+          <cite>Jonna Ukkola, Halmelan Vuohitila</cite>
+        </div>
+        <p>Mjolken gar direkt till Juustoportti, som forarbetar den till ostar. Gardens egen forsaljning fokuserar pa getkott. Akrarna producerar ekologiskt spannmal. Tre produktionsinriktningar, en familj, en gard.</p>
+      </div>
+
+      <div class="two-col-text lang-en" data-lang>
+        <p>Twelve years by the shore of Halmelajarvi in Loppi. Before that: decades of organic grain, fields that knew the Ukkola family's footsteps. Then came a generational change, and Jonna and Eero began to think about a new direction. Goat milk demand was growing in Finland faster than anyone had anticipated. Thirteen goats arrived at the farm in the spring of 2019.</p>
+        <p>The old barn had no milking carousel. Jonna remembers the day they acquired the first milking machine. Five years later, over 360 does queue up at the carousel daily, and the total headcount has risen to six hundred. Halmelan Vuohitila has grown into Finland's second-largest goat farm.</p>
+        <div class="pull-quote">
+          <blockquote class="lang-en" data-lang>We started with thirteen goats. Six years later we have six hundred. I couldn't say where the limit is, but we know that quality is our limit.</blockquote>
+          <cite>Jonna Ukkola, Halmelan Vuohitila</cite>
+        </div>
+        <p>The milk goes directly to Juustoportti, which processes it into cheeses. The farm's own sales focus on goat meat. The fields produce organic grain. Three production lines, one family, one farm.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     PRODUCTS — editorial magazine sub-articles
+     ============================================================ -->
+<section class="section-products" id="products">
+  <div class="products-header">
+    <span class="kicker" style="color:var(--sienna);" data-lang>
+      <span class="lang-fi">Tuotanto &amp; myynti</span>
+      <span class="lang-sv">Produktion &amp; forsaljning</span>
+      <span class="lang-en">Production &amp; Sales</span>
+    </span>
+    <h2 class="i18n-inline">
+      <span class="lang-fi">Kolme tuotetta,<br>yksi tila</span>
+      <span class="lang-sv">Tre produkter,<br>en gard</span>
+      <span class="lang-en">Three products,<br>one farm</span>
+    </h2>
+  </div>
+
+  <div class="products-grid">
+    <!-- Product 1 -->
+    <article class="product-article reveal">
+      <span class="product-num">I</span>
+      <div class="product-ph">
+        <div class="ph" style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:0.5rem;background:var(--paper-mid);">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--rule)" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="0"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+        </div>
+      </div>
+      <h3 class="i18n-inline">
+        <span class="lang-fi">Vuohenmaito</span>
+        <span class="lang-sv">Getmjolk</span>
+        <span class="lang-en">Goat Milk</span>
+      </h3>
+      <span class="product-subtitle i18n-inline">
+        <span class="lang-fi">Juustoportille &mdash; pellolta juustoon</span>
+        <span class="lang-sv">Till Juustoportti &mdash; fran aker till ost</span>
+        <span class="lang-en">To Juustoportti &mdash; from field to cheese</span>
+      </span>
+      <div class="rule-h"></div>
+      <p class="lang-fi" data-lang>Halmelan kutut tuottavat luomuvuohenmaitoa, joka toimitetaan paivittain Juustoportille jalostettavaksi. Maidosta valmistetaan vuohenjuustoja, jotka kaytetaan valtakunnallisesti myymaloissa. Tilan maidosta valmistettua juustoa on mahdollista ostaa myos suoraan Juustoportin jalkieleenmyyntipisteista.</p>
+      <p class="lang-sv" data-lang>Halmelans getter producerar ekologisk getmjolk, som dagligen levereras till Juustoportti for bearbetning. Av mjolken tillverkas getost som sals i butiker over hela landet.</p>
+      <p class="lang-en" data-lang>Halmelan's does produce organic goat milk, delivered daily to Juustoportti for processing. The milk is made into goat cheeses sold in stores nationwide. Cheese made from the farm's milk can also be purchased directly from Juustoportti retail points.</p>
+    </article>
+
+    <!-- Product 2 -->
+    <article class="product-article reveal">
+      <span class="product-num">II</span>
+      <div class="product-ph">
+        <div class="ph" style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:0.5rem;background:var(--paper-mid);">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--rule)" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="0"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+        </div>
+      </div>
+      <h3 class="i18n-inline">
+        <span class="lang-fi">Vuohenliha</span>
+        <span class="lang-sv">Getkott</span>
+        <span class="lang-en">Goat Meat</span>
+      </h3>
+      <span class="product-subtitle i18n-inline">
+        <span class="lang-fi">Suoraan tilalta &mdash; tuore ja pakaste</span>
+        <span class="lang-sv">Direkt fran garden &mdash; farsk och fryst</span>
+        <span class="lang-en">Direct from farm &mdash; fresh and frozen</span>
+      </span>
+      <div class="rule-h"></div>
+      <p class="lang-fi" data-lang>Vuohenliha on monikerroksinen, valimerellinen maku, jota suomalainen ruokakulttuuri on vasta oppimassa arvostamaan. Halmelan liha myydaan suoraan tilalta, tuoreena ja pakastettuna. Kysy saatavuudesta puhelimitse. Luomukasvatus takaa elainten hyvinvoinnin ja lihan laadun.</p>
+      <p class="lang-sv" data-lang>Getkott ar en mangdimensionell sak, en medelhavsmak som det finska matkulturen just har borjat uppskatta. Halmelans kott saljs direkt fran garden, farsk och fryst. Fraga om tillganglighet per telefon.</p>
+      <p class="lang-en" data-lang>Goat meat is a layered, Mediterranean flavour that Finnish food culture is only beginning to appreciate. Halmelan's meat is sold directly from the farm, fresh and frozen. Ask about availability by phone. Organic farming ensures animal welfare and meat quality.</p>
+    </article>
+
+    <!-- Product 3 -->
+    <article class="product-article reveal">
+      <span class="product-num">III</span>
+      <div class="product-ph">
+        <div class="ph" style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:0.5rem;background:var(--paper-mid);">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--rule)" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="0"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+        </div>
+      </div>
+      <h3 class="i18n-inline">
+        <span class="lang-fi">Luomuvilja</span>
+        <span class="lang-sv">Ekologiskt spannmal</span>
+        <span class="lang-en">Organic Grain</span>
+      </h3>
+      <span class="product-subtitle i18n-inline">
+        <span class="lang-fi">Lopen pellot &mdash; markkinoille</span>
+        <span class="lang-sv">Loppi aker &mdash; till marknaden</span>
+        <span class="lang-en">Loppi fields &mdash; to market</span>
+      </span>
+      <div class="rule-h"></div>
+      <p class="lang-fi" data-lang>Tilan pellot ovat tuottaneet luomuviljaa vuosikymmenia. Sukupolvenvaihdoksen jalkeen peltoviljelys jatkuu rinnakkain vuohienpidona. Luomuvilja myydaan markkinoille. Tilan kolmen tuotantosuunnan tasapaino on laskelmoitu tarkkaan: maidon, lihan ja viljan kokonaisuus tekee tilasta kestavan.</p>
+      <p class="lang-sv" data-lang>Gardensakrarna har producerat ekologiskt spannmal i artionden. Efter generationsskiftet fortsatter akerodlingen parallellt med getskotsel. Det ekologiska spannamalets balans med de andra produktionsgrenarna gor garden hallbar.</p>
+      <p class="lang-en" data-lang>The farm's fields have produced organic grain for decades. After the generational change, arable farming continues alongside goat keeping. The organic grain is sold to market. The balance of all three production lines makes the farm sustainable.</p>
+    </article>
+  </div>
+</section>
+
+<!-- ============================================================
+     VUOHEN VUOSI — signature 12-month editorial calendar
+     ============================================================ -->
+<section class="section-calendar" id="calendar">
+  <div class="calendar-header">
+    <span class="kicker">
+      <span class="i18n-inline">
+        <span class="lang-fi">Tilan rytmi</span>
+        <span class="lang-sv">Gardens rytm</span>
+        <span class="lang-en">The farm's rhythm</span>
+      </span>
+    </span>
+    <h2 class="i18n-inline">
+      <span class="lang-fi">Vuohen<br>vuosi</span>
+      <span class="lang-sv">Gettens<br>ar</span>
+      <span class="lang-en">The goat's<br>year</span>
+    </h2>
+    <p class="i18n-inline">
+      <span class="lang-fi">Kahdentoista kuukauden kiertokulku Halmelan tilalla &mdash; syntymasta laitumelle, maidosta markkinoille.</span>
+      <span class="lang-sv">Tolvmanadersrytm pa Halmelan garden &mdash; fran fodsel till bete, fran mjolk till marknad.</span>
+      <span class="lang-en">Twelve months on Halmelan farm &mdash; from birth to pasture, from milk to market.</span>
+    </p>
+  </div>
+
+  <div class="calendar-grid">
+    <!-- MONTH 1: January -->
+    <div class="cal-month">
+      <span class="cal-month-icon">&#x2744;</span>
+      <div class="cal-month-name">
+        <span class="i18n-inline"><span class="lang-fi">Tammikuu</span><span class="lang-sv">Januari</span><span class="lang-en">January</span></span>
+      </div>
+      <div class="cal-month-event i18n-inline">
+        <span class="lang-fi">Tiineyden alku</span>
+        <span class="lang-sv">Draktigheten borjar</span>
+        <span class="lang-en">Pregnancy begins</span>
+      </div>
+      <div class="cal-month-text i18n-inline">
+        <span class="lang-fi">Kutut ovat tiineina. Navetta pysyy lampimana, liike vahenee, rauhallisuus hallitsee.</span>
+        <span class="lang-sv">Getter ar driktiga. Lugn dominerar i stallet.</span>
+        <span class="lang-en">Does are pregnant. Calm dominates in the barn.</span>
+      </div>
+    </div>
+
+    <!-- MONTH 2: February -->
+    <div class="cal-month">
+      <span class="cal-month-icon">&#x2744;</span>
+      <div class="cal-month-name">
+        <span class="i18n-inline"><span class="lang-fi">Helmikuu</span><span class="lang-sv">Februari</span><span class="lang-en">February</span></span>
+      </div>
+      <div class="cal-month-event i18n-inline">
+        <span class="lang-fi">Loppuraskauden aika</span>
+        <span class="lang-sv">Sen draktighet</span>
+        <span class="lang-en">Late pregnancy</span>
+      </div>
+      <div class="cal-month-text i18n-inline">
+        <span class="lang-fi">Ruokinta tiivistyy, elainten tarkkailu tehostuu. Ensimmaisten kilien syntymaa odotetaan.</span>
+        <span class="lang-sv">Fodringen intensifieras, forsta killingarnas fodsel vantad.</span>
+        <span class="lang-en">Feeding intensifies, first kid births anticipated.</span>
+      </div>
+    </div>
+
+    <!-- MONTH 3: March — PEAK (kidding season) -->
+    <div class="cal-month peak">
+      <span class="cal-month-icon">&#x1F90D;</span>
+      <div class="cal-month-name">
+        <span class="i18n-inline"><span class="lang-fi">Maaliskuu</span><span class="lang-sv">Mars</span><span class="lang-en">March</span></span>
+      </div>
+      <div class="cal-month-event i18n-inline">
+        <span class="lang-fi">Poikimakausi</span>
+        <span class="lang-sv">Killningssasong</span>
+        <span class="lang-en">Kidding season</span>
+      </div>
+      <div class="cal-month-text i18n-inline">
+        <span class="lang-fi">Kiilien syntyma on vuoden kiirekisin hetki. Vuorokaudet sekoittuvat. Jokainen syntynyt kili tarkastetaan.</span>
+        <span class="lang-sv">Killningarnas fodsel ar arets sbbsaste stund. Varje kid kontrolleras.</span>
+        <span class="lang-en">Kid births are the farm's busiest time. Each newborn kid is checked.</span>
+      </div>
+    </div>
+
+    <!-- MONTH 4: April — PEAK -->
+    <div class="cal-month peak">
+      <span class="cal-month-icon">&#x1F90D;</span>
+      <div class="cal-month-name">
+        <span class="i18n-inline"><span class="lang-fi">Huhtikuu</span><span class="lang-sv">April</span><span class="lang-en">April</span></span>
+      </div>
+      <div class="cal-month-event i18n-inline">
+        <span class="lang-fi">Lypsy alkaa</span>
+        <span class="lang-sv">Mjolkningen borjar</span>
+        <span class="lang-en">Milking begins</span>
+      </div>
+      <div class="cal-month-text i18n-inline">
+        <span class="lang-fi">Poikimisen jalkeen karuselli tayttaa vauhtinsa. Maito virtaa paivittain Juustoportille.</span>
+        <span class="lang-sv">Efter killningen nar karusellen full fart. Mjolken floder dagligen till Juustoportti.</span>
+        <span class="lang-en">After kidding the carousel reaches full pace. Milk flows daily to Juustoportti.</span>
+      </div>
+    </div>
+
+    <!-- MONTH 5: May -->
+    <div class="cal-month">
+      <span class="cal-month-icon">&#x1F33F;</span>
+      <div class="cal-month-name">
+        <span class="i18n-inline"><span class="lang-fi">Toukokuu</span><span class="lang-sv">Maj</span><span class="lang-en">May</span></span>
+      </div>
+      <div class="cal-month-event i18n-inline">
+        <span class="lang-fi">Laidunvalmistelu</span>
+        <span class="lang-sv">Betesforeberedelse</span>
+        <span class="lang-en">Pasture preparation</span>
+      </div>
+      <div class="cal-month-text i18n-inline">
+        <span class="lang-fi">Pellot heratavat. Lypsykausi on taydessa kaynnissa, aitauksia tarkistetaan laitunia varten.</span>
+        <span class="lang-sv">Akrarna vaknar. Mjolkningssasongen ar i full gang, stangslar kontrolleras.</span>
+        <span class="lang-en">Fields awaken. Milking season in full swing, fencing checked for pasture.</span>
+      </div>
+    </div>
+
+    <!-- MONTH 6: June — PEAK (pasture season) -->
+    <div class="cal-month peak">
+      <span class="cal-month-icon">&#x2600;</span>
+      <div class="cal-month-name">
+        <span class="i18n-inline"><span class="lang-fi">Kesakuu</span><span class="lang-sv">Juni</span><span class="lang-en">June</span></span>
+      </div>
+      <div class="cal-month-event i18n-inline">
+        <span class="lang-fi">Laidunkausi alkaa</span>
+        <span class="lang-sv">Betessasongen borjar</span>
+        <span class="lang-en">Pasture season opens</span>
+      </div>
+      <div class="cal-month-text i18n-inline">
+        <span class="lang-fi">Vuohet paasevat ulos. Lopen kesapellot, aurinko, vapaus. Maito saa kesalaitumen maun.</span>
+        <span class="lang-sv">Getter slapps ut. Loppi sommarangar, sol, frihet. Mjolken far sommarsmak.</span>
+        <span class="lang-en">Goats go outside. Loppi summer fields, sun, freedom. Milk takes on a summer taste.</span>
+      </div>
+    </div>
+
+    <!-- MONTH 7: July — PEAK -->
+    <div class="cal-month peak">
+      <span class="cal-month-icon">&#x2600;</span>
+      <div class="cal-month-name">
+        <span class="i18n-inline"><span class="lang-fi">Heinakuu</span><span class="lang-sv">Juli</span><span class="lang-en">July</span></span>
+      </div>
+      <div class="cal-month-event i18n-inline">
+        <span class="lang-fi">Heinankorjuu &amp; lypsyhuippu</span>
+        <span class="lang-sv">Hoskord &amp; mjolkningstopp</span>
+        <span class="lang-en">Hay harvest &amp; peak milking</span>
+      </div>
+      <div class="cal-month-text i18n-inline">
+        <span class="lang-fi">Heina korjataan talven varalle. Lypsymaarat saavuttavat vuoden huipun. Yot ovat lyhyita, paivat taynnakiiretta.</span>
+        <span class="lang-sv">Ho skordas. Mjolkproduktionen nar arstoppen. Korta natter, fullpackade dagar.</span>
+        <span class="lang-en">Hay is harvested. Milk yields reach the year's peak. Short nights, packed days.</span>
+      </div>
+    </div>
+
+    <!-- MONTH 8: August -->
+    <div class="cal-month">
+      <span class="cal-month-icon">&#x1F33E;</span>
+      <div class="cal-month-name">
+        <span class="i18n-inline"><span class="lang-fi">Elokuu</span><span class="lang-sv">Augusti</span><span class="lang-en">August</span></span>
+      </div>
+      <div class="cal-month-event i18n-inline">
+        <span class="lang-fi">Viljankorjuu</span>
+        <span class="lang-sv">Spannamalsskord</span>
+        <span class="lang-en">Grain harvest</span>
+      </div>
+      <div class="cal-month-text i18n-inline">
+        <span class="lang-fi">Pellot jalkleen korjataan luomuvilja. Syksy lahenee, vuohet jatkavat laitumella.</span>
+        <span class="lang-sv">Akrarnas ekologiska spannmal skordas. Hosten narmar sig, getter pa bete.</span>
+        <span class="lang-en">The fields' organic grain is harvested. Autumn approaches, goats still on pasture.</span>
+      </div>
+    </div>
+
+    <!-- MONTH 9: September -->
+    <div class="cal-month">
+      <span class="cal-month-icon">&#x1F342;</span>
+      <div class="cal-month-name">
+        <span class="i18n-inline"><span class="lang-fi">Syyskuu</span><span class="lang-sv">September</span><span class="lang-en">September</span></span>
+      </div>
+      <div class="cal-month-event i18n-inline">
+        <span class="lang-fi">Pukki astuu</span>
+        <span class="lang-sv">Bocken betacker</span>
+        <span class="lang-en">Buck season</span>
+      </div>
+      <div class="cal-month-text i18n-inline">
+        <span class="lang-fi">Astutuskausi alkaa. Tulevaa kevaatta valmistetaan. Laidunkausi paattyy, elaimet siirtyvat navettaan.</span>
+        <span class="lang-sv">Parningstiden borjar. Nastar varen forberedss. Betessasongen slutar.</span>
+        <span class="lang-en">Mating season begins. Next spring is being prepared. Pasture season ends.</span>
+      </div>
+    </div>
+
+    <!-- MONTH 10: October -->
+    <div class="cal-month">
+      <span class="cal-month-icon">&#x1F342;</span>
+      <div class="cal-month-name">
+        <span class="i18n-inline"><span class="lang-fi">Lokakuu</span><span class="lang-sv">Oktober</span><span class="lang-en">October</span></span>
+      </div>
+      <div class="cal-month-event i18n-inline">
+        <span class="lang-fi">Lypsyn vaheneminen</span>
+        <span class="lang-sv">Minskad mjolkning</span>
+        <span class="lang-en">Declining milking</span>
+      </div>
+      <div class="cal-month-text i18n-inline">
+        <span class="lang-fi">Maidontuotanto alkaa vahenea. Elamet rauhoittuvat, navetan rutiinit muuttuvat.</span>
+        <span class="lang-sv">Mjolkproduktionen minskar. Djuren lugnar sig, stavsrutinerna andras.</span>
+        <span class="lang-en">Milk production starts to decline. Animals settle, barn routines shift.</span>
+      </div>
+    </div>
+
+    <!-- MONTH 11: November -->
+    <div class="cal-month">
+      <span class="cal-month-icon">&#x2603;</span>
+      <div class="cal-month-name">
+        <span class="i18n-inline"><span class="lang-fi">Marraskuu</span><span class="lang-sv">November</span><span class="lang-en">November</span></span>
+      </div>
+      <div class="cal-month-event i18n-inline">
+        <span class="lang-fi">Ummessaolokausi</span>
+        <span class="lang-sv">Sinlaggningstid</span>
+        <span class="lang-en">Dry period</span>
+      </div>
+      <div class="cal-month-text i18n-inline">
+        <span class="lang-fi">Kutut lopettavat lypsyn valmistautuakseen tulevaan tiineyteen. Lepo on osa kiertoa.</span>
+        <span class="lang-sv">Getterna slutar mjolkas for att forberedda sig for nakommande draktighet.</span>
+        <span class="lang-en">Does stop milking to prepare for upcoming pregnancy. Rest is part of the cycle.</span>
+      </div>
+    </div>
+
+    <!-- MONTH 12: December -->
+    <div class="cal-month">
+      <span class="cal-month-icon">&#x2744;</span>
+      <div class="cal-month-name">
+        <span class="i18n-inline"><span class="lang-fi">Joulukuu</span><span class="lang-sv">December</span><span class="lang-en">December</span></span>
+      </div>
+      <div class="cal-month-event i18n-inline">
+        <span class="lang-fi">Vuoden paatos</span>
+        <span class="lang-sv">Arets avslutning</span>
+        <span class="lang-en">Year's end</span>
+      </div>
+      <div class="cal-month-text i18n-inline">
+        <span class="lang-fi">Navetta on hiljainen. Elaimet lepaaavat. Tila valmistautuu joulumyyntiin ja uuteen vuoteen.</span>
+        <span class="lang-sv">Stallet ar tyst. Djuren vilar. Garden forbereder julforssajning och nytt ar.</span>
+        <span class="lang-en">The barn is quiet. Animals rest. The farm prepares for Christmas sales and the new year.</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     TARINA — editorial two-col feature spread
+     ============================================================ -->
+<section class="section-tarina" id="story">
+  <div class="tarina-inner">
+    <div class="tarina-col">
+      <span class="kicker i18n-inline" style="display:block; margin-bottom:1rem;">
+        <span class="lang-fi">Jonna ja Eero Ukkola</span>
+        <span class="lang-sv">Jonna och Eero Ukkola</span>
+        <span class="lang-en">Jonna and Eero Ukkola</span>
+      </span>
+      <h2 class="i18n-inline">
+        <span class="lang-fi">Sukupolvenvaihdos, joka muutti kaiken</span>
+        <span class="lang-sv">Generationsskiftet som andrade allt</span>
+        <span class="lang-en">The generational change that changed everything</span>
+      </h2>
+      <!-- Photo placeholder in tarina -->
+      <div class="tarina-photo">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--rule)" stroke-width="1"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+        <span class="label-sc i18n-inline">
+          <span class="lang-fi">Kuva tilalta</span>
+          <span class="lang-sv">Foto fran garden</span>
+          <span class="lang-en">Photo from farm</span>
+        </span>
+      </div>
+      <p class="lang-fi" data-lang>Lopen Halmelajarven rannalla on eletty jo ennen nykyisia yrittajia. Pellot ovat tuottaneet luomuviljaa sukupolvesta toiseen. Sukupolvenvaihdoksen edessa Jonna ja Eero tekivat paatoksen, joka yllatyttti monet: vuohet, eivat lehmit.</p>
+      <p class="lang-fi" data-lang>&ldquo;Vuohenmaidon proteiinirakenne on erilainen, se on helpommin sulavaa monille ihmisille, ja kysyntä kasvoi selkeasti&rdquo;, Eero selittaa. &ldquo;Halusimme lahten siihen, missa nakimme kasvun.&rdquo;</p>
+      <p class="lang-sv" data-lang>Vid stranden av Halmelajarvi i Loppi har det levts lange. Akrarna har producerat ekologiskt spannmal fran generation till generation. Infor generationsskiftet tog Jonna och Eero ett beslut som overraskade manga: getter, inte kor.</p>
+      <p class="lang-en" data-lang>On the shore of Halmelajarvi in Loppi, people have lived long before the current farmers. The fields have produced organic grain from generation to generation. Facing the generational change, Jonna and Eero made a decision that surprised many: goats, not cows.</p>
+    </div>
+
+    <div class="tarina-divider"></div>
+
+    <div class="tarina-col">
+      <span class="kicker i18n-inline" style="display:block; margin-bottom:1rem; margin-top:2.5rem;">
+        <span class="lang-fi">Luvut kertovat</span>
+        <span class="lang-sv">Siffrorna beratter</span>
+        <span class="lang-en">Numbers tell the story</span>
+      </span>
+
+      <div class="tarina-fact-row">
+        <span class="tarina-fact-num">600</span>
+        <div class="tarina-fact-label">
+          <strong class="i18n-inline">
+            <span class="lang-fi">Vuohta tilalla</span>
+            <span class="lang-sv">Getter pa garden</span>
+            <span class="lang-en">Goats on farm</span>
+          </strong>
+          <span class="i18n-inline">
+            <span class="lang-fi">Kokonaispaäluku, joista noin 360 lypsyssä päivittäin.</span>
+            <span class="lang-sv">Totalt antal, varav ca 360 mjolkas dagligen.</span>
+            <span class="lang-en">Total headcount, of which approx. 360 milked daily.</span>
+          </span>
+        </div>
+      </div>
+
+      <div class="tarina-fact-row">
+        <span class="tarina-fact-num">2</span>
+        <div class="tarina-fact-label">
+          <strong class="i18n-inline">
+            <span class="lang-fi">Suurin Suomessa</span>
+            <span class="lang-sv">Storst i Finland</span>
+            <span class="lang-en">Largest in Finland</span>
+          </strong>
+          <span class="i18n-inline">
+            <span class="lang-fi">Halmelan Vuohitila on Suomen toiseksi suurin vuohitila.</span>
+            <span class="lang-sv">Halmelans getgard ar Finlands nast storsta getgard.</span>
+            <span class="lang-en">Halmelan Vuohitila is Finland's second-largest goat farm.</span>
+          </span>
+        </div>
+      </div>
+
+      <div class="tarina-fact-row">
+        <span class="tarina-fact-num">3</span>
+        <div class="tarina-fact-label">
+          <strong class="i18n-inline">
+            <span class="lang-fi">Tuotantosuuntaa</span>
+            <span class="lang-sv">Produktionsinriktningar</span>
+            <span class="lang-en">Production lines</span>
+          </strong>
+          <span class="i18n-inline">
+            <span class="lang-fi">Vuohenmaito, vuohenliha ja luomuvilja — yhden tilan kolme tukijalkaa.</span>
+            <span class="lang-sv">Getmjolk, getkott och ekologiskt spannmal.</span>
+            <span class="lang-en">Goat milk, goat meat, and organic grain — the three pillars of one farm.</span>
+          </span>
+        </div>
+      </div>
+
+      <div class="tarina-fact-row" style="border-bottom:1px solid var(--rule-lt);">
+        <span class="tarina-fact-num" style="font-size:1.2rem; min-width:3rem;">Luomu</span>
+        <div class="tarina-fact-label">
+          <strong class="i18n-inline">
+            <span class="lang-fi">Sertifioitu luomutuotanto</span>
+            <span class="lang-sv">Certifierad ekologisk produktion</span>
+            <span class="lang-en">Certified organic production</span>
+          </strong>
+          <span class="i18n-inline">
+            <span class="lang-fi">Tilan kaikki toiminta noudattaa luomun periaatteita.</span>
+            <span class="lang-sv">Alla gardens aktiviteter foljer ekologiska principer.</span>
+            <span class="lang-en">All farm activities follow organic principles.</span>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     CONTACT — magazine colophon
+     ============================================================ -->
+<section class="section-contact" id="contact">
+  <div class="colophon-header">
+    <span class="kicker i18n-inline">
+      <span class="lang-fi">Ota yhteyttä</span>
+      <span class="lang-sv">Kontakta oss</span>
+      <span class="lang-en">Get in touch</span>
+    </span>
+    <h2 class="i18n-inline">
+      <span class="lang-fi">Halmelan<br>Vuohitila</span>
+      <span class="lang-sv">Halmelans<br>Getgard</span>
+      <span class="lang-en">Halmelan<br>Goat Farm</span>
+    </h2>
+  </div>
+
+  <div class="colophon-grid">
+    <!-- Col 1: Address -->
+    <div class="colophon-col">
+      <span class="colophon-col-label i18n-inline">
+        <span class="lang-fi">Osoite</span>
+        <span class="lang-sv">Adress</span>
+        <span class="lang-en">Address</span>
+      </span>
+      <div class="colophon-row">
+        <span class="colophon-row-label i18n-inline">
+          <span class="lang-fi">Tila</span>
+          <span class="lang-sv">Gard</span>
+          <span class="lang-en">Farm</span>
+        </span>
+        <span class="colophon-row-val">Halmelan Vuohitila</span>
+      </div>
+      <div class="colophon-row">
+        <span class="colophon-row-label i18n-inline">
+          <span class="lang-fi">Katu</span>
+          <span class="lang-sv">Gata</span>
+          <span class="lang-en">Street</span>
+        </span>
+        <span class="colophon-row-val">Halmelantie 77</span>
+      </div>
+      <div class="colophon-row">
+        <span class="colophon-row-label i18n-inline">
+          <span class="lang-fi">Paikkakunta</span>
+          <span class="lang-sv">Ort</span>
+          <span class="lang-en">Location</span>
+        </span>
+        <span class="colophon-row-val">12700 Loppi, Kanta-Häme</span>
+      </div>
+      <div class="colophon-row">
+        <span class="colophon-row-label i18n-inline">
+          <span class="lang-fi">Yrittäjät</span>
+          <span class="lang-sv">Agare</span>
+          <span class="lang-en">Owners</span>
+        </span>
+        <span class="colophon-row-val">Jonna &amp; Eero Ukkola</span>
+      </div>
+    </div>
+
+    <!-- Col 2: Contact -->
+    <div class="colophon-col">
+      <span class="colophon-col-label i18n-inline">
+        <span class="lang-fi">Yhteystiedot</span>
+        <span class="lang-sv">Kontaktuppgifter</span>
+        <span class="lang-en">Contact details</span>
+      </span>
+      <div class="colophon-row">
+        <span class="colophon-row-label i18n-inline">
+          <span class="lang-fi">Puhelin</span>
+          <span class="lang-sv">Telefon</span>
+          <span class="lang-en">Phone</span>
+        </span>
+        <span class="colophon-row-val"><a href="tel:+358409394613">040 939 4613</a></span>
+      </div>
+      <div class="colophon-row">
+        <span class="colophon-row-label">Facebook</span>
+        <span class="colophon-row-val"><a href="https://www.facebook.com/halmelanluomu" target="_blank" rel="noopener">halmelanluomu</a></span>
+      </div>
+      <div class="colophon-row">
+        <span class="colophon-row-label">Instagram</span>
+        <span class="colophon-row-val"><a href="https://www.instagram.com/halmelanvuohitila" target="_blank" rel="noopener">@halmelanvuohitila</a></span>
+      </div>
+    </div>
+
+    <!-- Col 3: Products / info -->
+    <div class="colophon-col">
+      <span class="colophon-col-label i18n-inline">
+        <span class="lang-fi">Myynti</span>
+        <span class="lang-sv">Forsaljning</span>
+        <span class="lang-en">Sales</span>
+      </span>
+      <div class="colophon-row">
+        <span class="colophon-row-label i18n-inline">
+          <span class="lang-fi">Liha</span>
+          <span class="lang-sv">Kott</span>
+          <span class="lang-en">Meat</span>
+        </span>
+        <span class="colophon-row-val i18n-inline">
+          <span class="lang-fi">Suoraan tilalta, soita ensin</span>
+          <span class="lang-sv">Direkt fran garden, ring forst</span>
+          <span class="lang-en">Direct from farm, call first</span>
+        </span>
+      </div>
+      <div class="colophon-row">
+        <span class="colophon-row-label i18n-inline">
+          <span class="lang-fi">Maito</span>
+          <span class="lang-sv">Mjolk</span>
+          <span class="lang-en">Milk</span>
+        </span>
+        <span class="colophon-row-val">Juustoportti</span>
+      </div>
+      <div class="colophon-row">
+        <span class="colophon-row-label i18n-inline">
+          <span class="lang-fi">Vilja</span>
+          <span class="lang-sv">Spannmal</span>
+          <span class="lang-en">Grain</span>
+        </span>
+        <span class="colophon-row-val i18n-inline">
+          <span class="lang-fi">Markkinoille</span>
+          <span class="lang-sv">Till marknaden</span>
+          <span class="lang-en">To market</span>
+        </span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     FOOTER
+     ============================================================ -->
+<footer class="site-footer">
+  <span class="footer-wordmark">Halmelan <em>Vuohitila</em> &mdash; Loppi</span>
+  <span class="footer-credit">
+    Demo, suunnitellut <a href="https://antonjalonen.fi" target="_blank">Anton Jalonen</a>
+    &bull; Ei virallinen julkaisu
+  </span>
+</footer>
+
+<!-- ============================================================
+     SCRIPTS
+     ============================================================ -->
+<script>
+// Language switching
+function setLang(l) {
+  document.body.className = 'lang-' + l;
+  document.querySelectorAll('.lang-btn').forEach(b => b.classList.toggle('active', b.textContent.trim().toLowerCase() === l));
+  try { localStorage.setItem('hv-lang', l); } catch(e) {}
+  // update page title
+  const titles = {fi:'Halmelan Vuohitila — Loppi, Häme', sv:'Halmelans Getgård — Loppi, Tavastland', en:'Halmelan Goat Farm — Loppi, Finland'};
+  document.title = titles[l];
+}
+// Load saved or browser language
+(function() {
+  var saved;
+  try { saved = localStorage.getItem('hv-lang'); } catch(e) {}
+  var lang = saved || (navigator.language || '').slice(0,2).toLowerCase();
+  if (lang === 'sv') setLang('sv');
+  else if (lang === 'en') setLang('en');
+  else setLang('fi');
+})();
+
+// Hamburger menu
+var hamburger = document.getElementById('hamburger');
+var mobileMenu = document.getElementById('mobile-menu');
+hamburger.addEventListener('click', function() {
+  mobileMenu.classList.toggle('open');
+});
+function closeMobile() { mobileMenu.classList.remove('open'); }
+
+// Intersection observer — reveal animations
+var observer = new IntersectionObserver(function(entries) {
+  entries.forEach(function(e) {
+    if (e.isIntersecting) {
+      e.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.08 });
+
+document.querySelectorAll('.reveal, .teaser-item, .product-article, .cal-month').forEach(function(el) {
+  observer.observe(el);
+});
+</script>
+</body>
+</html>
